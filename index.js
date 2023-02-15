@@ -37,7 +37,7 @@ const bodyParser = require('body-parser').json();
 app.get('/', controller.resJson)
 
 // Rota para GET -> get(id) -> Recebe apenas o registro identificado.
-// app.get('/:id', controller.resJson);
+app.get('/:id', controller.resJson);
 
 // Rota para POST -> post() -> Cria um registro -> bodyParser é usado para garantir a chegada de um JSON. Cria um registro 
 app.post('/', bodyParser, controller.resJson)
