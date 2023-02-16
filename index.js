@@ -25,14 +25,15 @@ const controller = {
 
         // Envia JSON com os dados acima para o cliente, como texto plano JSON.
         res.json(data);
-
     }
 }
+
 // Recebe os dados do body HTTP e valida em JSON.
 const bodyParser = require('body-parser').json();
 
-/*
 
+
+/*
 // Rota para GET -> getAll() -> Recebe, por exemplo, todos os registros.
 app.get('/', controller.resJson)
 
@@ -53,7 +54,6 @@ app.listen(port, () => {
 })
 */
 
-const array = [];
 
 
 // Objeto que será executado quando houver uma requisição
@@ -91,23 +91,23 @@ const thing = {
     put: async (req, res) => {
         const id = req.params.id;
         res.json(
-        array.push({
+        {
          "req": req.method, 
          "body": req.body,
          "id": id,
          "status": "ok" 
-        })
+        }
         )
     },
 
     delete: async (req, res) => {
         const id = req.params.id;
-        array.push(res.json(
+        res.json(
         { 
         "req": req.method, 
         "id": id, 
         "status": "ok" 
-        })
+        }
         )
     }
 }
@@ -120,13 +120,12 @@ const user = {
 }
 
 
-// Rota para coisas
+// Rota para coisas/thing
 app.get('/', thing.getAll)
 app.get('/:id', thing.getOne);
 app.post('/', bodyParser, thing.post)
 app.put('/:id', bodyParser, thing.put);
 app.delete('/:id', thing.delete);
-
 
 
 // Rotas para o usuário
