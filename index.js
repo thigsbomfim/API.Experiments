@@ -1,18 +1,18 @@
-const express = require('express');
-const app = express();
-
 const conf = require('dotenv').config().parsed;
+const express = require('express');
+const mysql = require('mysql2');
 
+
+const app = express();
 const port = conf.HTTPPORT;
 
-const mysql = require('mysql2');
 
 const conn = mysql.createPool({
     host: conf.HOSTNAME,
     database: conf.DATABASE,
     user: conf.USERNAME,
     password: conf.PASSWORD,
-    port: conf.port
+    port: conf.HOSTPORT
 }).promise();
 
 // Objeto que será executado quando houver uma requisição.
