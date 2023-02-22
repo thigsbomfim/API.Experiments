@@ -59,12 +59,12 @@ const thing = {
     post: async (req, res) => {
         try { 
 
-            // Extrai os campos do req.body.
-            const {user, name, photo, description, location, options} = req.body;
+            // Extrai os campos do req.body
+            const {tuser, tname, tphoto, tdescription, tlocation, toptions} = req.body;
             
             // Query
             const sql = "INSERT INTO things( tuser, tname, tphoto, tdescription, tlocation, toptions ) VALUES ( ?, ?, ?, ?, ?, ? );";
-            const [atributos] = await conn.query(sql, [user, name, photo, description, location, options])
+            const [atributos] = await conn.query(sql, [tuser, tname, tphoto, tdescription, tlocation, toptions])
             
             // Views dos dados
             res.json({ coisa: atributos.insertId, status: "sucess" })
