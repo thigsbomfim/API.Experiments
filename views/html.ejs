@@ -5,11 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
 </head>
 <body>
-    <div >
-        <p class="cont"><%= vari %></p>
+    <div class="cont">
+        <% view.forEach(function(coisas) { %>
+            <p class="1">NOME: <%= coisas.tname %></p>
+            
+            <p class="2">LOCALIZAÇÃO: <%= coisas.tlocation %></p>
+
+            
+            <p class="3">CARACTERISTICAS: <%= coisas.toptions %></p>
+            <br>
+            <br>
+        <% }); %>
     </div>
    
 </body>

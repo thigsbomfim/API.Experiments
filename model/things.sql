@@ -40,7 +40,7 @@ INSERT INTO things VALUES
     'https://picsum.photos/200',
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed imperdiet tellus. Suspendisse congue euismod tincidunt.',
     'Garagem',
-    {"estado": "péssimo", "cor": "vermelha", "marca": "Monark"},
+    '{"estado": "péssimo", "cor": "vermelha", "marca": "Monark"}',
     'on'
 ), (
     '2',
@@ -50,7 +50,7 @@ INSERT INTO things VALUES
     'https://picsum.photos/201',
     'Curabitur et turpis sodales libero consectetur congue vel nec felis. Suspendisse a metus ac turpis gravida efficitur eget varius tortor.',
     'Gaveta',
-    {"estado": "barulhento", "cor": "preto/prata", "marca": "Chinguelingue"},
+    '{"estado": "barulhento", "cor": "preto/prata", "marca": "Chinguelingue"}',
     'on'
 ), (
     '3',
@@ -60,7 +60,7 @@ INSERT INTO things VALUES
     'https://picsum.photos/202',
     'Sed volutpat tristique euismod. Duis et urna porta, varius dolor eget, dignissim ex. Morbi nec tortor aliquet, feugiat neque eu, sagittis est.',
     'Sob a cama',
-    {"estado": "arranhado", "cor": "bege", "marca": "ToyKoyCool"},
+    '{"estado": "arranhado", "cor": "bege", "marca": "ToyKoyCool"}',
     'on'
 ), (
     '4',
@@ -70,6 +70,6 @@ INSERT INTO things VALUES
     'https://picsum.photos/203',
     'Nulla ultrices aliquet arcu, nec vehicula libero ornare ac. Aenean finibus lectus in dolor mollis, eget lacinia sapien pharetra.',
     'Cama do gato',
-    {"estado": "ausente", "cor": "branco", "marca": "SRD"},
+    '{"estado": "ausente", "cor": "branco", "marca": "SRD"}',
     'on'
 );
